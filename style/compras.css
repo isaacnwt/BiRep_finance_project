@@ -1,0 +1,103 @@
+/* Conseguir uma fonte do goole após o posicionamento */
+*{
+    padding:0;
+    margin:0; 
+    border:0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+#main{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    
+    
+
+
+}
+header{
+    box-sizing: border-box;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border: 2px solid black;
+    background-color: #6959CD;
+    padding: 20px;
+}
+
+section{
+
+    display:flex;
+    height:500px;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+form{
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    border: 3px solid black;
+    padding:10vh;
+    border-radius:5px;
+    background-color:#EE82EE;
+
+}
+
+label{
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+ 
+input {
+
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.botao{
+
+    background-color: aqua;
+    margin-top:10px;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+img{
+    border-radius:5px;
+    width:80px;
+}
+
+ul{
+    display: flex;
+}
+ul li {
+
+    margin-left: 5px;
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+}
+
+ul li a {
+
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: #8A2BE2;	
+}
+
