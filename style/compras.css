@@ -61,7 +61,7 @@ label{
     padding-bottom: 5px;
 }
  
-input {
+input, button {
 
     padding: 20px;
     border-radius: 5px;
