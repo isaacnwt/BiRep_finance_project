@@ -101,3 +101,7 @@ ul li a {
     background-color: #8A2BE2;	
 }
 
+table, tbody, td{
+    border: 1px solid black;
+
+}

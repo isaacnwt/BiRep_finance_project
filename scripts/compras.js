@@ -24,22 +24,8 @@ function AddWebStorage(nome, produto, valor){
         "valor": valor
     }
     const compra_string = JSON.stringify(compra);
-
-    const lista_chaves = [];
-    for (let i = 0; i < localStorage.length; i++) {
-        var elemento = localStorage.key(i);
-        lista_chaves.push(elemento);
-    }
-
-    // comparando errado, só dá certo na primeira vez
-    if (!lista_chaves.includes(produto)) {
-        localStorage.setItem(compra.produto, compra_string);
-        console.log("produto adicionado") ;   
-    } else {
-        // localStorage.setItem(compra.produto + '.1', compra_string);
-        console.log("chave duplicada");
-    }
-
+    
+    localStorage.setItem(localStorage.length + 1, compra_string);
 
 
 }
@@ -55,3 +41,31 @@ function validaForm(dado,campo) {
     }
   
 }
+
+
+function recuperaDadosWS() {
+
+    const storage = localStorage;
+
+    for (let i = 0; i < storage.length; i++) {
+        var compra = JSON.parse(storage.getItem(storage.key(i)));
+        console.log(compra)
+
+        var tr = $("<tr>");
+        var nome = $("<td>").text(compra.nome);
+        var produto = $("<td>").text(compra.produto);
+        // falta formatar o preço para 'R$00,00' com .toFixed(2), mas o dado tá como string
+        var valor = $("<td>").text("R$" + compra.valor);
+
+        tr.append(nome).append(produto).append(valor);
+
+        $("tbody").append(tr);
+
+    }
+
+    
+}
+
+///////////// MAIN //////////////////
+
+recuperaDadosWS();
