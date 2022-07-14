@@ -23,20 +23,21 @@ function AddWebStorage(nome, produto, valor){
         "produto": produto,
         "valor": valor
     }
-
-
     const compra_string = JSON.stringify(compra);
 
-    
-    //Adicionar objetos no WS
-    // Se não existir a KEY, salvar direto
-    
-    if (1 == 1) {
+    const lista_chaves = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        var elemento = localStorage.key(i);
+        lista_chaves.push(elemento);
+    }
+
+    // comparando errado, só dá certo na primeira vez
+    if (!lista_chaves.includes(produto)) {
         localStorage.setItem(compra.produto, compra_string);
-        console.log(compra.produto + " adicionado >> " + compra_string )    
+        console.log("produto adicionado") ;   
     } else {
-        //  se não, adicionar KEY + 1
-        localStorage.setItem(compra.produto, compra_string);
+        // localStorage.setItem(compra.produto + '.1', compra_string);
+        console.log("chave duplicada");
     }
 
 
