@@ -54,8 +54,8 @@ function recuperaDadosWS() {
         var tr = $("<tr>");
         var nome = $("<td>").text(compra.nome);
         var produto = $("<td>").text(compra.produto);
-        // falta formatar o preço para 'R$00,00' com .toFixed(2), mas o dado tá como string
-        var valor = $("<td>").text("R$" + compra.valor);
+        var valor_int = parseInt(compra.valor);
+        var valor = $("<td>").text("R$ " + valor_int.toFixed(2));
 
         tr.append(nome).append(produto).append(valor);
 
