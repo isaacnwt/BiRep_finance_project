@@ -10,6 +10,7 @@ body{
     font-family: 'Fira Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Noto Sans', sans-serif;
+    background-image: url("../img/bg.jpeg");
 
 }
 
@@ -28,17 +29,14 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    border: 2px solid black;
-    background-color: #6959CD;
     padding: 20px;
 }
 
 section{
-
     display:flex;
-    height:500px;
     justify-content:center;
     align-items:flex-end;
+    margin-top: 20px;
 }
 
 form{
@@ -48,13 +46,15 @@ form{
     align-items:flex-start;
     justify-content:center;
     border: 3px solid black;
-    padding:10vh;
     border-radius:5px;
-    background-color:#EE82EE;
+    padding:5vh;
+    background-color:#2e36a6;
+    color: white;
 
 }
 
 label{
+    margin-top:20px;
     font-weight: bold;
     padding-top: 5px;
     font-size: 15px;
@@ -63,16 +63,20 @@ label{
  
 input, button {
 
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 5px;
 
 }
 
 .botao{
 
-    background-color: aqua;
-    margin-top:10px;
-    padding: 10px;
+    background-color: black;
+    border-radius: 25px;
+    color: white;
+    margin-top:20px;
+    width: 98px;
+    padding: 8px 8px;
+    text-align: center;
     font-weight: bold;
 
 }
@@ -87,21 +91,38 @@ ul{
 }
 ul li {
 
-    margin-left: 5px;
-    border: 2px solid black;
-    padding: 10px;
+    margin-left: 10px;
+    background-color: black;
+    border-radius: 25px;
     display: flex;
 }
 
 ul li a {
 
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
-    background-color: #8A2BE2;	
+    width: 98px;
+    padding: 8px 8px;
+    text-align: center;
 }
 
-table, tbody, td{
-    border: 1px solid black;
+ul li a:hover {
 
+    color: #2e36a6;
+
+}
+
+table {
+    text-align: center;
+}
+
+thead tr {
+    background-color: #cc1278;
+    border: 3px solid black;
+    
+}
+
+tbody tr {
+    color: white;
 }
