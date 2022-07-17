@@ -1,47 +1,31 @@
-//Primeira função para a coleta de dados
 
 function coletaDados(){
+
     //Coletando os valores na dom
     let nome = document.getElementById("nome").value;
-
     let produto = document.getElementById("produto").value;
-
     let valor = document.getElementById("valor").value;
-
-    console.log(nome, produto, valor);
 
     if(validaForm(nome,"nome") == true && validaForm(produto,"produto") == true && validaForm(valor,"valor")== true){
         AddWebStorage(nome, produto, valor)
     } 
-    console.log('nome, produto, valor:>> ', nome, produto, valor);
+    
     //Adicionar esses dados a um vetor
    
 }
 
 function AddWebStorage(nome, produto, valor){
     
-    
     //Usar um objeto javascript para receber os dados do formulário
 
     const compra = {
-
-        "nome": "nome da fita",
-        'produto': "produto tal",
-       " valor": "preco pago"
+        "nome": nome,
+        "produto": produto,
+        "valor": valor
     }
-
-    compra.nome = nome;
-    compra.produto = produto;
-    compra.valor = valor;
-
-    console.log('compra.nome :>> ', compra);
-
     const compra_string = JSON.stringify(compra);
-
     
-    //Criando um objeto para armazenar os dados em questão
-
-    localStorage.setItem('item comprado',compra_string);
+    localStorage.setItem(localStorage.length + 1, compra_string);
 
 
 }
@@ -58,7 +42,30 @@ function validaForm(dado,campo) {
   
 }
 
-//Adicionar esses dados em um vetor de objetos
 
-//Adicionar na local storage 
-console.log('entroou :>> ');
+function recuperaDadosWS() {
+
+    const storage = localStorage;
+
+    for (let i = 0; i < storage.length; i++) {
+        var compra = JSON.parse(storage.getItem(storage.key(i)));
+        console.log(compra)
+
+        var tr = $("<tr>");
+        var nome = $("<td>").text(compra.nome);
+        var produto = $("<td>").text(compra.produto);
+        var valor_int = parseInt(compra.valor);
+        var valor = $("<td>").text("R$ " + valor_int.toFixed(2));
+
+        tr.append(nome).append(produto).append(valor);
+
+        $("tbody").append(tr);
+
+    }
+
+    
+}
+
+///////////// MAIN //////////////////
+
+recuperaDadosWS();
