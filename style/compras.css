@@ -61,7 +61,7 @@ label{
     padding-bottom: 5px;
 }
  
-input {
+input, button {
 
     padding: 20px;
     border-radius: 5px;
@@ -101,3 +101,7 @@ ul li a {
     background-color: #8A2BE2;	
 }
 
+table, tbody, td{
+    border: 1px solid black;
+
+}
