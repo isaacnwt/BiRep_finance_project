@@ -19,11 +19,9 @@ body{
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    
-    
-
 
 }
+
 header{
     box-sizing: border-box;
     display:flex;
@@ -120,7 +118,7 @@ table {
 thead tr {
     background-color: #cc1278;
     border: 3px solid black;
-    
+    color: #fff;
 }
 
 tbody tr {
