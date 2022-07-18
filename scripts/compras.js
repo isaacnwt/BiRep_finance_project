@@ -1,4 +1,4 @@
-
+console.log('leu :>> ');
 function coletaDados(){
 
     //Coletando os valores na dom
