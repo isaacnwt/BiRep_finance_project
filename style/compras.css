@@ -3,7 +3,7 @@
     padding:0;
     margin:0; 
     border:0;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
 }
 body{
 
@@ -101,7 +101,20 @@ ul li a {
     background-color: #8A2BE2;	
 }
 
-table, tbody, td{
+table{
+    
     border: 1px solid black;
+}
+table th, table td{
 
+    border: 1px solid black;
+}
+
+#content{
+
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+
+    padding: 20px;
 }
