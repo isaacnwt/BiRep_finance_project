@@ -10,7 +10,8 @@ function coletaDados(){
         AddWebStorage(nome, produto, valor)
     } 
     
-    //Adicionar esses dados a um vetor
+    // Falta melhoras a função para não somar todos os dados, apenas atualizar a tabela
+    // recuperaDadosWS();
    
 }
 
@@ -47,6 +48,7 @@ function recuperaDadosWS() {
 
     const storage = localStorage;
 
+
     for (let i = 0; i < storage.length; i++) {
         var compra = JSON.parse(storage.getItem(storage.key(i)));
         console.log(compra)
@@ -68,4 +70,7 @@ function recuperaDadosWS() {
 
 ///////////// MAIN //////////////////
 
+
 recuperaDadosWS();
+
+$("#send-data").click(coletaDados)
