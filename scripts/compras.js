@@ -1,11 +1,14 @@
-console.log('leu :>> ');
 function coletaDados(){
 
     //Coletando os valores na dom
-    let nome = document.getElementById("nome").value;
-    let produto = document.getElementById("produto").value;
-    let valor = document.getElementById("valor").value;
+    // let nome = document.getElementById("nome").value;
+    // let produto = document.getElementById("produto").value;
+    // let valor = document.getElementById("valor").value;
 
+    let nome = $('#nome').val();
+    let produto = $("#produto").val();
+    let valor = $("#valor").val();
+    
     if(validaForm(nome,"nome") == true && validaForm(produto,"produto") == true && validaForm(valor,"valor")== true){
         AddWebStorage(nome, produto, valor)
     } 
@@ -51,7 +54,6 @@ function recuperaDadosWS() {
 
     for (let i = 0; i < storage.length; i++) {
         var compra = JSON.parse(storage.getItem(storage.key(i)));
-        console.log(compra)
 
         var tr = $("<tr>");
         var nome = $("<td>").text(compra.nome);
