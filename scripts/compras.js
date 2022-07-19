@@ -13,8 +13,7 @@ function coletaDados(){
         AddWebStorage(nome, produto, valor)
     } 
     
-    // Falta melhoras a função para não somar todos os dados, apenas atualizar a tabela
-    // recuperaDadosWS();
+    recuperaDadosWS();
    
 }
 
@@ -50,7 +49,7 @@ function validaForm(dado,campo) {
 function recuperaDadosWS() {
 
     const storage = localStorage;
-
+    $("tbody").empty();
 
     for (let i = 0; i < storage.length; i++) {
         var compra = JSON.parse(storage.getItem(storage.key(i)));
@@ -70,7 +69,7 @@ function recuperaDadosWS() {
     
 }
 
-///////////// MAIN //////////////////
+///////////// MAIN ////////////////
 
 
 recuperaDadosWS();
